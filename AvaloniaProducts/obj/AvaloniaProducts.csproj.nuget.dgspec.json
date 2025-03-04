@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
+    "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {
+    "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "projectUniqueName": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
         "projectName": "AvaloniaProducts",
-        "projectPath": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
-        "packagesPath": "C:\\Users\\irisp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\obj\\",
+        "projectPath": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "packagesPath": "C:\\Users\\blockchain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\irisp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\blockchain\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -5,5 +5,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaProducts.Win"
         Title="Win">
-	<StackPanel Name="Panel" Background="#cadbed"/>
+	<StackPanel Background="#cadbed">
+		<TextBlock Margin="0 5">Продукты: </TextBlock>
+		<ListBox x:Name="editProductsListBox" SelectionMode="Single" />
+	</StackPanel>
 </Window>

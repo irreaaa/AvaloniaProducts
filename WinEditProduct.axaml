@@ -1,0 +1,14 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaProducts.WinEditProduct"
+        Title="Редактирование продукта">
+	<StackPanel Margin="20">
+		<TextBlock Text="Название продукта:"/>
+		<TextBox x:Name="ProductNameTextBox"/>
+
+		<TextBlock Text="Цена продукта:"/>
+		<TextBox x:Name="ProductCostTextBox"/>
+
+		<Button x:Name="SaveButton" Content="Сохранить"/>
+	</StackPanel>
+</Window>

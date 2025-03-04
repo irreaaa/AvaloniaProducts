@@ -7,27 +7,47 @@ namespace AvaloniaProducts;
 
 public partial class Win : Window
 {
+
+    private List<Product> _products;
     public Win(List<Product> products)
     {
         InitializeComponent();
-        StackPanel panel = this.FindControl<StackPanel>("Panel");
+        _products = products;
+        ListBox listBox = this.FindControl<ListBox>("editProductsListBox");
 
-        foreach (var product in products)
+        foreach (var product in _products)
         {
             TextBlock nameBlock = new TextBlock
             {
-                Text = $"Название: {product.GetProductName()}",
+                Text = $"\nНазвание: {product.GetProductName()}",
                 Foreground = new SolidColorBrush(Color.Parse("#326da8"))
             };
 
             TextBlock costBlock = new TextBlock
             {
-                Text = $"Цена: {product.GetProductCost()} руб.\n",
+                Text = $"Цена: {product.GetProductCost()} руб.",
                 Foreground = new SolidColorBrush(Color.Parse("#326da8"))
             };
 
-            panel.Children.Add(nameBlock);
-            panel.Children.Add(costBlock);
+            Button editButton = new Button
+            {
+                Content = "Редактировать продукт",
+                FontFamily = "Wellinghton",
+                Background = new SolidColorBrush(Color.Parse("#326da8")),
+                Foreground = new SolidColorBrush(Color.Parse("#cadbed")),
+            };
+            editButton.Click += (sender, e) => EditProduct_Click(product);
+            
+
+            listBox.Items.Add(nameBlock);
+            listBox.Items.Add(costBlock);
+            listBox.Items.Add(editButton);
         }
+    }
+    private async void EditProduct_Click(Product product)
+    {
+        WinEditProduct editWindow = new WinEditProduct(product, _products);
+        await editWindow.Show();
+       Close();
     }
 }
