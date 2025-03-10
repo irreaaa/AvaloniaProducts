@@ -40,7 +40,7 @@ public partial class MainWindow : Window
         {
            Win Win =  new Win(products);
             Win.Show();
-            Close();
+            this.Close();
         }
         else
         {

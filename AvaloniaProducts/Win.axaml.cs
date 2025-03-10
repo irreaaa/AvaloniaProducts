@@ -44,10 +44,10 @@ public partial class Win : Window
             listBox.Items.Add(editButton);
         }
     }
-    private async void EditProduct_Click(Product product)
+    private void EditProduct_Click(Product product)
     {
         WinEditProduct editWindow = new WinEditProduct(product, _products);
-        await editWindow.Show();
-       Close();
+        editWindow.Show();
+       this.Close();
     }
 }

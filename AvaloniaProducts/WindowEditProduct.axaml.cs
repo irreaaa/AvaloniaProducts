@@ -17,15 +17,16 @@ public partial class WinEditProduct : Window
         this.FindControl<Button>("SaveButton").Click += SaveChanges_Click;
     }
 
-    public WinEditProduct(Product product, List<Product> products) : this()
+    public WinEditProduct(Product product, List<Product> products)
     {
         _product = product;
         _products = products;
-        this.FindControl<TextBox>("ProductNameTextBox").Text = _product.GetProductName();
-        this.FindControl<TextBox>("ProductCostTextBox").Text = _product.GetProductCost().ToString();
+        InitializeComponent();
+        ProductNameTextBox.Text = _product.ProductName;
+        ProductCostTextBox.Text = _product.ProductCost.ToString();
     }
 
-    public async void SaveChanges_Click(object? sender, RoutedEventArgs e)
+    public void SaveChanges_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = ProductNameTextBox.Text;
         if (double.TryParse(ProductCostTextBox.Text, out double enteredCostOfProduct))
@@ -34,8 +35,8 @@ public partial class WinEditProduct : Window
             _product.ProductCost = enteredCostOfProduct;
 
             Win Win = new Win(_products);
-            Close();
-           await Win.Show();
+           Win.Show();
+            this.Close();
           
         }
         else
