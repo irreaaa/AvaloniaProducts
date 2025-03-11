@@ -20,6 +20,13 @@ public partial class MainWindow : Window
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = TextBoxName.Text;
+        foreach(var product in products)
+        {
+            if (product.ProductName == enteredProductName)
+            {
+                ShowDoubleErrorMessage();
+            }
+        }
         if (double.TryParse(TextBoxCount.Text, out double enteredCostOfProduct))
         {
             Product product = new Product(enteredProductName, enteredCostOfProduct);
@@ -64,5 +71,14 @@ public partial class MainWindow : Window
             Position = NotificationPosition.BottomCenter
         };
         notificationManager.Show(new Notification("Ошибка", "Список продуктов пуст.", NotificationType.Error));
+    }
+
+    private void ShowDoubleErrorMessage()
+    {
+        var notificationManager = new WindowNotificationManager(this)
+        {
+            Position = NotificationPosition.BottomCenter
+        };
+        notificationManager.Show(new Notification("Ошибка", "Такой продукт уже есть.", NotificationType.Error));
     }
 }
