@@ -8,23 +8,12 @@ namespace AvaloniaProducts;
 
 public class Product
 {
-    public string ProductName;
-    public double ProductCost;
+    public string ProductName { get; set; }
+    public double ProductCost { get; set; }
 
     internal Product(string productName, double productCost)
     {
         ProductName = productName;
         ProductCost = productCost;
     }
-
-    public string GetProductName()
-    {
-        return ProductName;
-    }
-
-    public double GetProductCost()
-    {
-        return ProductCost;
-    }
-
 }

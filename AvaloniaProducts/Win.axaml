@@ -2,11 +2,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvaloniaProducts"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaProducts.Win"
         Title="Win">
-	<StackPanel Background="#cadbed">
-		<TextBlock Margin="0 5">Продукты: </TextBlock>
-		<ListBox x:Name="editProductsListBox" SelectionMode="Single" />
+
+	<StackPanel>
+		<TextBlock Text="Продукты: " />
+		<ListBox Name="ProductListBox" SelectionMode="Single">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="{Binding}" />
+						<Button Click="Del_Click" Content="Удалить" />
+						<Button Click="Edit_Click" Content="Редактировать" />
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
 	</StackPanel>
 </Window>

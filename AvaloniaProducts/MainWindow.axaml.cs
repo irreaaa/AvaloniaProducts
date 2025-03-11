@@ -38,7 +38,7 @@ public partial class MainWindow : Window
     {
         if (products.Count > 0)
         {
-           Win Win =  new Win(products);
+            Win Win = new Win(products);
             Win.Show();
             this.Close();
         }

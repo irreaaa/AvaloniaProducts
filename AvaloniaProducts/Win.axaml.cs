@@ -1,53 +1,53 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Media;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Numerics;
+using Avalonia.Controls.Shapes;
+using Avalonia.OpenGL;
+using Avalonia.Markup.Xaml.Templates;
+using Avalonia.Styling;
+using System.Reflection.Metadata;
+using System.Data.Common;
+using Avalonia.Markup.Xaml.MarkupExtensions;
 
 namespace AvaloniaProducts;
 
 public partial class Win : Window
 {
+    public List<Product> Products { get; set; }
 
-    private List<Product> _products;
     public Win(List<Product> products)
     {
         InitializeComponent();
-        _products = products;
-        ListBox listBox = this.FindControl<ListBox>("editProductsListBox");
+        Products = products;
+        ProductListBox.ItemsSource = Products;
+    }
 
-        foreach (var product in _products)
+
+    private void Del_Click(object? sender, RoutedEventArgs e)
+    {
+        if(sender is Button button) 
         {
-            TextBlock nameBlock = new TextBlock
-            {
-                Text = $"\nНазвание: {product.GetProductName()}",
-                Foreground = new SolidColorBrush(Color.Parse("#326da8"))
-            };
+            Product deleteProduct = (Product)button.DataContext;
 
-            TextBlock costBlock = new TextBlock
+            if (Products.Contains(deleteProduct))
             {
-                Text = $"Цена: {product.GetProductCost()} руб.",
-                Foreground = new SolidColorBrush(Color.Parse("#326da8"))
-            };
-
-            Button editButton = new Button
-            {
-                Content = "Редактировать продукт",
-                FontFamily = "Wellinghton",
-                Background = new SolidColorBrush(Color.Parse("#326da8")),
-                Foreground = new SolidColorBrush(Color.Parse("#cadbed")),
-            };
-            editButton.Click += (sender, e) => EditProduct_Click(product);
-            
-
-            listBox.Items.Add(nameBlock);
-            listBox.Items.Add(costBlock);
-            listBox.Items.Add(editButton);
+                Products.Remove(deleteProduct);
+                ProductListBox.ItemsSource = null;
+                ProductListBox.ItemsSource = Products;
+            }
         }
     }
-    private void EditProduct_Click(Product product)
+
+    private void Edit_Click(object? sender, RoutedEventArgs e)
     {
-        WinEditProduct editWindow = new WinEditProduct(product, _products);
+        WinEditProduct editWindow = new WinEditProduct(Products);
         editWindow.Show();
-       this.Close();
+        this.Close();
     }
 }
