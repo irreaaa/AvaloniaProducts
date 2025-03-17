@@ -25,6 +25,7 @@
 		<TextBox Name="ProductCostTextBox" Watermark="введите название..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
 
 		<Button Name="SaveButton" HorizontalAlignment="Center" Content="Сохранить изменения" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="SaveChanges_Click"/>
+		<Button Name="ReturnButton" HorizontalAlignment="Center" Content="Вернуться ->" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="Return_Click"/>
 	</StackPanel>
 </Window>
 

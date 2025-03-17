@@ -14,40 +14,53 @@ using Avalonia.Styling;
 using System.Reflection.Metadata;
 using System.Data.Common;
 using Avalonia.Markup.Xaml.MarkupExtensions;
+using System.Collections.ObjectModel;
 
 namespace AvaloniaProducts;
 
 public partial class Win : Window
 {
-    public List<Product> Products { get; set; }
+    public List<Product> Products => ProductList.Instance.Products;
 
-    public Win(List<Product> products)
+    public Win()
     {
         InitializeComponent();
-        Products = products;
         ProductListBox.ItemsSource = Products;
+        UpdateEmptyListMessage();
     }
-
 
     private void Del_Click(object? sender, RoutedEventArgs e)
     {
-        if(sender is Button button) 
+        if(sender is Button button && button.DataContext is Product deleteProduct) 
         {
-            Product deleteProduct = (Product)button.DataContext;
+            ProductList.Instance.RemoveProduct(deleteProduct);
+            ProductListBox.ItemsSource = null;
+            ProductListBox.ItemsSource = Products;
 
-            if (Products.Contains(deleteProduct))
-            {
-                Products.Remove(deleteProduct);
-                ProductListBox.ItemsSource = null;
-                ProductListBox.ItemsSource = Products;
-            }
+            UpdateEmptyListMessage();
         }
     }
 
     private void Edit_Click(object? sender, RoutedEventArgs e)
     {
-        WinEditProduct editWindow = new WinEditProduct(Products);
-        editWindow.Show();
+        if (sender is Button button && button.DataContext is Product productToEdit)
+        {
+            WinEditProduct editWindow = new WinEditProduct(productToEdit);
+            editWindow.Show();
+            this.Close();
+        }
+    }
+
+    private void Return_Click(object? sender, RoutedEventArgs e)
+    {
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.Show();
         this.Close();
     }
+
+    private void UpdateEmptyListMessage()
+    {
+        EmptyListMessage.IsVisible = Products.Count == 0;
+    }
 }
+

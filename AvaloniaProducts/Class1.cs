@@ -11,9 +11,4 @@ public class Product
     public string ProductName { get; set; }
     public double ProductCost { get; set; }
 
-    internal Product(string productName, double productCost)
-    {
-        ProductName = productName;
-        ProductCost = productCost;
-    }
 }

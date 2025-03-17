@@ -11,7 +11,7 @@ namespace AvaloniaProducts;
 
 public partial class MainWindow : Window
 {
-    List<Product> products = new List<Product>();
+    private ProductList productList = ProductList.Instance;
     public MainWindow()
     {
         InitializeComponent();
@@ -20,17 +20,18 @@ public partial class MainWindow : Window
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = TextBoxName.Text;
-        foreach(var product in products)
+
+        foreach(var product in productList.Products)
         {
             if (product.ProductName == enteredProductName)
             {
                 ShowDoubleErrorMessage();
+                return;
             }
         }
         if (double.TryParse(TextBoxCount.Text, out double enteredCostOfProduct))
         {
-            Product product = new Product(enteredProductName, enteredCostOfProduct);
-            products.Add(product);
+            productList.AddProduct(enteredProductName, enteredCostOfProduct);
 
             TextBoxName.Text = "";
             TextBoxCount.Text = "";
@@ -43,9 +44,9 @@ public partial class MainWindow : Window
 
     private void BtnShowAllProducts_Click(object? sender, RoutedEventArgs e)
     {
-        if (products.Count > 0)
+        if (productList.Products.Count > 0)
         {
-            Win Win = new Win(products);
+            Win Win = new Win();
             Win.Show();
             this.Close();
         }
