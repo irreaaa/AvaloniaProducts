@@ -26,14 +26,16 @@
 				<TextBlock Text="Добавление продуктов" FontWeight="ExtraBold" FontSize="48" FontFamily="Wellingthon" Foreground="#326da8" Margin="20"/>
 			</StackPanel>
 			<StackPanel Orientation="Vertical" Margin="25">
-				<TextBlock Name="TextName" Text="Введите название продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
+				<TextBlock Name="TextName" Text="Введите название продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 0 0 5"/>
 				<TextBox Name="TextBoxName" Watermark="введите название..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
-				<TextBlock Name="TextCount" Text="Введите цену продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
-				<TextBox Name="TextBoxCount" Watermark="введите цену..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
+				<TextBlock Name="TextCost" Text="Введите цену продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
+				<TextBox Name="TextBoxCost" Watermark="введите цену..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
+				<TextBlock Name="TextQuantity" Text="Введите количество продуктов:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
+				<TextBox Name="TextBoxQuantity" Watermark="введите количество..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
 			</StackPanel>
 			<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-				<Button Name="btnAddProduct" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 30 5 5" Click="BtnAddProduct_Click" />
-				<Button Name="btnShowAllProducts" Content="Показать все продкуты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
+				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 15 5 5" Click="BtnAddProduct_Click" />
+				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Показать все продкуты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
 			</StackPanel>
 		</StackPanel>
 	</Grid>

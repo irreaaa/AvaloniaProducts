@@ -26,18 +26,20 @@ public partial class Win : Window
     {
         InitializeComponent();
         ProductListBox.ItemsSource = Products;
-        UpdateEmptyListMessage();
     }
 
     private void Del_Click(object? sender, RoutedEventArgs e)
     {
-        if(sender is Button button && button.DataContext is Product deleteProduct) 
+        if (sender is Button button && button.DataContext is Product deleteProduct)
         {
             ProductList.Instance.RemoveProduct(deleteProduct);
             ProductListBox.ItemsSource = null;
             ProductListBox.ItemsSource = Products;
-
-            UpdateEmptyListMessage();
+        }
+        if (ProductList.Instance.Products.Count == 0)
+        {
+            ProductListBox.ItemsSource = null;
+            ProductListBox.ItemsSource = new List<string> { "Список продуктов пуст."};
         }
     }
 
@@ -56,11 +58,6 @@ public partial class Win : Window
         MainWindow mainWindow = new MainWindow();
         mainWindow.Show();
         this.Close();
-    }
-
-    private void UpdateEmptyListMessage()
-    {
-        EmptyListMessage.IsVisible = Products.Count == 0;
     }
 }
 

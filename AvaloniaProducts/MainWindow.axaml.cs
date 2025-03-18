@@ -29,16 +29,27 @@ public partial class MainWindow : Window
                 return;
             }
         }
-        if (double.TryParse(TextBoxCount.Text, out double enteredCostOfProduct))
+        if (double.TryParse(TextBoxCost.Text, out double enteredCostOfProduct) && double.TryParse(TextBoxQuantity.Text, out double enteredQuantityOfProduct))
         {
-            productList.AddProduct(enteredProductName, enteredCostOfProduct);
+            if(enteredCostOfProduct <= 0)
+            {
+                ShowCostErrorMessage();
+                return;
+            }
+            if(enteredQuantityOfProduct <= 0)
+            {
+                ShowQuantityErrorMessage();
+                return;
+            }
+            productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct);
 
             TextBoxName.Text = "";
-            TextBoxCount.Text = "";
+            TextBoxCost.Text = "";
+            TextBoxQuantity.Text = "";
         }
         else
         {
-            ShowCostErrorMessage();
+            ShowErrorMessage();
         }
     }
 
@@ -52,7 +63,7 @@ public partial class MainWindow : Window
         }
         else
         {
-            ShowErrorMessage();
+            ShowEmptyErrorMessage();
         }
     }
 
@@ -65,7 +76,16 @@ public partial class MainWindow : Window
         notificationManager.Show(new Notification("Ошибка", "Некорректная цена продукта.", NotificationType.Error));
     }
 
-    private void ShowErrorMessage()
+    private void ShowQuantityErrorMessage()
+    {
+        var notificationManager = new WindowNotificationManager(this)
+        {
+            Position = NotificationPosition.BottomCenter
+        };
+        notificationManager.Show(new Notification("Ошибка", "Некорректное количетво продукта.", NotificationType.Error));
+    }
+
+    private void ShowEmptyErrorMessage()
     {
         var notificationManager = new WindowNotificationManager(this)
         {
@@ -81,5 +101,14 @@ public partial class MainWindow : Window
             Position = NotificationPosition.BottomCenter
         };
         notificationManager.Show(new Notification("Ошибка", "Такой продукт уже есть.", NotificationType.Error));
+    }
+
+    private void ShowErrorMessage()
+    {
+        var notificationManager = new WindowNotificationManager(this)
+        {
+            Position = NotificationPosition.BottomCenter
+        };
+        notificationManager.Show(new Notification("Ошибка", "Некорректная цена или количество.", NotificationType.Error));
     }
 }

@@ -8,7 +8,7 @@ namespace AvaloniaProducts
 {
     class ProductList
     {
-        private static ProductList? _products;
+        private static ProductList? _instance;
         public List<Product> Products { get; private set; }
 
         public ProductList()
@@ -20,15 +20,15 @@ namespace AvaloniaProducts
         {
             get
             {
-                if (_products == null)
-                    _products = new ProductList();
-                return _products;
+                if (_instance == null)
+                    _instance = new ProductList();
+                return _instance;
             }
         }
 
-        public void AddProduct(string productName, double productCost)
+        public void AddProduct(string productName, double productCost, double productQuantity)
         {
-            Products.Add(new Product { ProductName = productName, ProductCost = productCost });
+            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity });
         }
 
         public void RemoveProduct(Product product)

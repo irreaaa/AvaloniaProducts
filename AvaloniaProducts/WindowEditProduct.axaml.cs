@@ -18,7 +18,6 @@ public partial class WinEditProduct : Window
 
         ProductNameTextBox.Text = _product.ProductName;
         ProductCostTextBox.Text = _product.ProductCost.ToString();
-        this.FindControl<Button>("SaveButton").Click += SaveChanges_Click;
     }
 
     public void SaveChanges_Click(object? sender, RoutedEventArgs e)
@@ -30,12 +29,20 @@ public partial class WinEditProduct : Window
 
         if(double.TryParse(costTextBox.Text, out double newCost))
         {
+            if (newCost <= 0)
+            {
+                ShowCostErrorMessage();
+                return;
+            }
             _product.ProductCost = newCost;
+            Win Win = new Win();
+            Win.Show();
+            this.Close();
         }
-
-        Win Win = new Win();
-        Win.Show();
-        this.Close();
+        else
+        {
+            ShowCostErrorMessage();
+        }
     }
 
     private void Return_Click(object? sender, RoutedEventArgs e)
@@ -43,5 +50,14 @@ public partial class WinEditProduct : Window
         Win Win = new Win();
         Win.Show();
         this.Close();
+    }
+
+    private void ShowCostErrorMessage()
+    {
+        var notificationManager = new WindowNotificationManager(this)
+        {
+            Position = NotificationPosition.BottomCenter
+        };
+        notificationManager.Show(new Notification("Ошибка", "Некорректная цена продукта.", NotificationType.Error));
     }
 }
