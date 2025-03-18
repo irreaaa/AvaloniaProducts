@@ -29,27 +29,23 @@ public partial class MainWindow : Window
                 return;
             }
         }
-        if (double.TryParse(TextBoxCost.Text, out double enteredCostOfProduct) && double.TryParse(TextBoxQuantity.Text, out double enteredQuantityOfProduct))
+        if (!double.TryParse(TextBoxCost.Text, out double enteredCostOfProduct) || enteredCostOfProduct <= 0)
         {
-            if(enteredCostOfProduct <= 0)
-            {
-                ShowCostErrorMessage();
-                return;
-            }
-            if(enteredQuantityOfProduct <= 0)
-            {
-                ShowQuantityErrorMessage();
-                return;
-            }
+            ShowCostErrorMessage();
+            return;
+        }
+        if(!double.TryParse(TextBoxQuantity.Text, out double enteredQuantityOfProduct) || enteredQuantityOfProduct <= 0)
+        {
+            ShowQuantityErrorMessage();
+            return;
+        }
+        else
+        {
             productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct);
 
             TextBoxName.Text = "";
             TextBoxCost.Text = "";
             TextBoxQuantity.Text = "";
-        }
-        else
-        {
-            ShowErrorMessage();
         }
     }
 
@@ -101,14 +97,5 @@ public partial class MainWindow : Window
             Position = NotificationPosition.BottomCenter
         };
         notificationManager.Show(new Notification("Ошибка", "Такой продукт уже есть.", NotificationType.Error));
-    }
-
-    private void ShowErrorMessage()
-    {
-        var notificationManager = new WindowNotificationManager(this)
-        {
-            Position = NotificationPosition.BottomCenter
-        };
-        notificationManager.Show(new Notification("Ошибка", "Некорректная цена или количество.", NotificationType.Error));
     }
 }

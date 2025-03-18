@@ -18,30 +18,33 @@ public partial class WinEditProduct : Window
 
         ProductNameTextBox.Text = _product.ProductName;
         ProductCostTextBox.Text = _product.ProductCost.ToString();
+        ProductQuantityTextBox.Text = _product.ProductQuantity.ToString();
     }
 
     public void SaveChanges_Click(object? sender, RoutedEventArgs e)
     {
         var nameTextBox = this.FindControl<TextBox>("ProductNameTextBox");
         var costTextBox = this.FindControl<TextBox>("ProductCostTextBox");
+        var quantityTextBox = this.FindControl<TextBox>("ProductQuantityTextBox");
 
         _product.ProductName = nameTextBox.Text;
-
-        if(double.TryParse(costTextBox.Text, out double newCost))
+        if (!double.TryParse(costTextBox.Text, out double newCost) || newCost <= 0)
         {
-            if (newCost <= 0)
-            {
-                ShowCostErrorMessage();
-                return;
-            }
-            _product.ProductCost = newCost;
-            Win Win = new Win();
-            Win.Show();
-            this.Close();
+            ShowCostErrorMessage();
+            return;
+        }
+        if (!double.TryParse(quantityTextBox.Text, out double newQuantity) || newQuantity <= 0)
+        {
+            ShowQuantityErrorMessage();
+            return;
         }
         else
         {
-            ShowCostErrorMessage();
+            _product.ProductCost = newCost;
+            _product.ProductQuantity = newQuantity;
+            Win Win = new Win();
+            Win.Show();
+            this.Close();
         }
     }
 
@@ -59,5 +62,13 @@ public partial class WinEditProduct : Window
             Position = NotificationPosition.BottomCenter
         };
         notificationManager.Show(new Notification("Ошибка", "Некорректная цена продукта.", NotificationType.Error));
+    }
+    private void ShowQuantityErrorMessage()
+    {
+        var notificationManager = new WindowNotificationManager(this)
+        {
+            Position = NotificationPosition.BottomCenter
+        };
+        notificationManager.Show(new Notification("Ошибка", "Некорректное количетво продукта.", NotificationType.Error));
     }
 }

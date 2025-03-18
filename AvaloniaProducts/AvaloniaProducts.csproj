@@ -8,12 +8,16 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="basket.png" />
+    <None Remove="basket1.png" />
     <None Remove="return.png" />
     <None Remove="trash.png" />
     <None Remove="trash1.png" />
     <None Remove="trash2.png" />
   </ItemGroup>
   <ItemGroup>
+    <AvaloniaResource Include="basket.png" />
+    <AvaloniaResource Include="basket1.png" />
     <AvaloniaResource Include="return.png" />
     <AvaloniaResource Include="trash.png" />
     <AvaloniaResource Include="trash1.png" />

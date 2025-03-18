@@ -24,6 +24,9 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/BasketWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

@@ -28,6 +28,13 @@ public partial class Win : Window
         ProductListBox.ItemsSource = Products;
     }
 
+    private void Basket_Click(object? sender, RoutedEventArgs e)
+    {
+        BasketWindow basket = new BasketWindow();
+        basket.Show();
+        this.Close();
+    }
+
     private void Del_Click(object? sender, RoutedEventArgs e)
     {
         if (sender is Button button && button.DataContext is Product deleteProduct)
