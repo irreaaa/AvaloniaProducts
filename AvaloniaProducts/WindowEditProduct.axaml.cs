@@ -33,7 +33,7 @@ public partial class WinEditProduct : Window
             ShowCostErrorMessage();
             return;
         }
-        if (!double.TryParse(quantityTextBox.Text, out double newQuantity) || newQuantity <= 0)
+        if (!int.TryParse(quantityTextBox.Text, out int newQuantity) || newQuantity <= 0)
         {
             ShowQuantityErrorMessage();
             return;

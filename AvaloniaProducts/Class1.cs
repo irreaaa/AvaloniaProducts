@@ -10,6 +10,6 @@ public class Product
 {
     public string ProductName { get; set; }
     public double ProductCost { get; set; }
-    public double ProductQuantity { get; set; }
+    public int ProductQuantity { get; set; }
 
 }
