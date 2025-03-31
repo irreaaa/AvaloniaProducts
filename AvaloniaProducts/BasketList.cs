@@ -27,29 +27,30 @@ namespace AvaloniaProducts
             }
         }
 
-        public void AddToBasket(string productName, int productQuantityinBasket)
+        public void AddToBasket(string productName, int productQuantityInBasket)
         {
             var productInStore = ProductList.Instance.Products?.FirstOrDefault(p => p.ProductName == productName);
+            if (productInStore == null || productInStore.ProductQuantity == 0)
+            {
+                var notificationManager = new WindowNotificationManager()
+                {
+                    Position = NotificationPosition.BottomCenter
+                };
+                notificationManager.Show(new Notification("Ошибка", "Такого продукта больше нет.", NotificationType.Error));
+                return;
+            }
+
             var productInBasket = Basket.FirstOrDefault(p => p.ProductName == productName);
+
+            int availableToAdd = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
 
             if (productInBasket != null)
             {
-                int availableToAdd = Math.Min(productQuantityinBasket, productInStore.ProductQuantity - productInBasket.ProductQuantity);
                 productInBasket.ProductQuantity += availableToAdd;
                 productInBasket.ProductCost = productInStore.ProductCost * productInBasket.ProductQuantity;
             }
             else
             {
-                if (productInStore.ProductQuantity == 0)
-                {
-                    var notificationManager = new WindowNotificationManager()
-                    {
-                        Position = NotificationPosition.BottomCenter
-                    };
-                    notificationManager.Show(new Notification("Ошибка", "Такого продукта больше нет.", NotificationType.Error));
-                }
-
-                int availableToAdd = Math.Min(productQuantityinBasket, productInStore.ProductQuantity);
                 Basket.Add(new Product
                 {
                     ProductName = productName,
@@ -57,207 +58,46 @@ namespace AvaloniaProducts
                     ProductQuantity = availableToAdd
                 });
             }
+
+            productInStore.ProductQuantity -= availableToAdd;
         }
+
 
         public void RemoveOneFromBasket(string productName, int productQuantityInBasket)
         {
-            var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == productName);
             var productInBasket = Basket.FirstOrDefault(p => p.ProductName == productName);
+            var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == productName);
 
-            if (productInBasket != null)
+            if (productInBasket == null) return;
+
+            if (productInStore != null)
             {
-                int availableToRemoveOne = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
-                productInBasket.ProductQuantity -= availableToRemoveOne;
-                productInBasket.ProductCost = productInStore.ProductCost * productInBasket.ProductQuantity;
+                productInStore.ProductQuantity += productQuantityInBasket;
             }
-            if (productInBasket == null)
+
+            productInBasket.ProductQuantity -= productQuantityInBasket;
+
+            if (productInBasket.ProductQuantity <= 0)
             {
-                RemoveFromBasket(productInBasket);
+                Basket.RemoveAll(p => p.ProductName == productName);
             }
-                int availableToRemoveOne1 = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
-                Basket.Remove(new Product
-                {
-                    ProductName = productName,
-                    ProductCost = productInStore.ProductCost * availableToRemoveOne1,
-                    ProductQuantity = availableToRemoveOne1
-                });
         }
+
+
 
         public void RemoveFromBasket(Product product)
         {
             if (Basket.Contains(product))
             {
+                var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == product.ProductName);
+                if (productInStore != null)
+                {
+                    productInStore.ProductQuantity += product.ProductQuantity;
+                }
+
                 Basket.Remove(product);
             }
         }
+
     }
 }
-// почеум при удалении продуктов, если количество продуктов = 0, то они не удаляются, а идут в минус?
-
-
-//using System;
-//using System.Collections.ObjectModel;
-//using System.Linq;
-
-//namespace AvaloniaProducts
-//{
-//    class BasketList
-//    {
-//        private static BasketList? _instance;
-//        public ObservableCollection<Product> Basket { get; private set; }
-
-//        private BasketList()
-//        {
-//            Basket = new ObservableCollection<Product>();
-//        }
-
-//        public static BasketList Instance
-//        {
-//            get
-//            {
-//                if (_instance == null)
-//                    _instance = new BasketList();
-//                return _instance;
-//            }
-//        }
-
-//        public void AddToBasket(Product product, int quantityToAdd)
-//        {
-//            if (product == null || quantityToAdd <= 0) return;
-
-//            var basketProduct = Basket.FirstOrDefault(p => p.ProductName == product.ProductName);
-//            int availableQuantity = product.ProductQuantity;
-//            int currentInBasket = basketProduct?.ProductQuantity ?? 0;
-//            int maxCanAdd = availableQuantity - currentInBasket;
-
-//            if (maxCanAdd <= 0) return;
-
-//            if (basketProduct != null)
-//            {
-//                basketProduct.ProductQuantity += Math.Min(quantityToAdd, maxCanAdd);
-//            }
-//            else
-//            {
-//                Basket.Add(new Product
-//                {
-//                    ProductName = product.ProductName,
-//                    ProductCost = product.ProductCost,
-//                    ProductQuantity = Math.Min(quantityToAdd, maxCanAdd)
-//                });
-//            }
-//        }
-
-//        public void RemoveFromBasket(Product product)
-//        {
-//            if (product != null && Basket.Contains(product))
-//            {
-//                Basket.Remove(product);
-//            }
-//        }
-//    }
-//}
-
-
-
-
-
-////using System;
-////using System.Collections.Generic;
-////using System.Linq;
-////using System.Text;
-////using System.Threading.Tasks;
-
-////namespace AvaloniaProducts
-////{
-////    class BasketList
-////    {
-////        private static BasketList? _instance;
-////        public List<Product> Basket { get; private set; }
-
-////        private BasketList()
-////        {
-////            Basket = new List<Product>();
-////        }
-
-////        public static BasketList Instance
-////        {
-////            get
-////            {
-////                if (_instance == null)
-////                    _instance = new BasketList();
-////                return _instance;
-////            }
-////        }
-
-////        public void AddToBasket(Product product, int quantityToAdd)
-////        {
-////            if (product == null || quantityToAdd <= 0) return;
-
-////            var basketProduct = Basket.FirstOrDefault(p => p.ProductName == product.ProductName);
-
-////            int availableQuantity = product.ProductQuantity; 
-////            int currentInBasket = basketProduct?.ProductQuantity ?? 0; 
-////            int maxCanAdd = availableQuantity - currentInBasket; 
-
-////            if (maxCanAdd <= 0) return; 
-
-////            if (basketProduct != null)
-////            {
-////                basketProduct.ProductQuantity += Math.Min(quantityToAdd, maxCanAdd);
-////            }
-////            else
-////            {
-////                Basket.Add(new Product
-////                {
-////                    ProductName = product.ProductName,
-////                    ProductCost = product.ProductCost,
-////                    ProductQuantity = Math.Min(quantityToAdd, maxCanAdd)
-////                });
-////            }
-////        }
-
-////        public void RemoveFromBasket(Product product)
-////        {
-////            if (product == null) return;
-////            var basketProduct = Basket.FirstOrDefault(p => p.ProductName == product.ProductName);
-////            if (basketProduct != null)
-////            {
-////                Basket.Remove(basketProduct);
-////            }
-////        }
-////    }
-////}
-
-
-
-
-//////public bool AddToBasket(Product product)
-//////{
-//////    if (Basket.ContainsKey(product))
-//////    {
-//////        if (Basket[product] < product.ProductQuantity)
-//////        {
-//////            Basket[product]++;
-//////        }
-//////        return false;
-//////    }
-//////    else
-//////    {
-//////        if (product.ProductQuantity > 0)
-//////        {
-//////            Basket[product] = 1;
-//////            return true;
-//////        }
-//////        return true;
-//////    }
-//////}
-
-//////public void RemovefromBasket(Product product)
-//////{
-//////    if (Basket.ContainsKey(product))
-//////    {
-//////        Basket[product]--;
-//////        if (Basket[product] <= 0)
-//////            Basket.Remove(product);
-//////    }
-//////}

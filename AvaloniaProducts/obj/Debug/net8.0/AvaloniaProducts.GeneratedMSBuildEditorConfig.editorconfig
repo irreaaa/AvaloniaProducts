@@ -15,23 +15,23 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AvaloniaProducts
-build_property.ProjectDir = C:\Users\blockchain\source\repos\AvaloniaProductsList\AvaloniaProducts\
+build_property.ProjectDir = C:\Users\irisp\source\repos\AvaloniaProductsList\AvaloniaProducts\AvaloniaProducts\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/App.axaml]
+[C:/Users/irisp/source/repos/AvaloniaProductsList/AvaloniaProducts/AvaloniaProducts/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/BasketWindow.axaml]
+[C:/Users/irisp/source/repos/AvaloniaProductsList/AvaloniaProducts/AvaloniaProducts/BasketWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/MainWindow.axaml]
+[C:/Users/irisp/source/repos/AvaloniaProductsList/AvaloniaProducts/AvaloniaProducts/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/Win.axaml]
+[C:/Users/irisp/source/repos/AvaloniaProductsList/AvaloniaProducts/AvaloniaProducts/Win.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/blockchain/source/repos/AvaloniaProductsList/AvaloniaProducts/WindowEditProduct.axaml]
+[C:/Users/irisp/source/repos/AvaloniaProductsList/AvaloniaProducts/AvaloniaProducts/WindowEditProduct.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
