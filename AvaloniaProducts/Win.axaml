@@ -34,11 +34,11 @@
 						<TextBlock Text=" Кол-во:" Width="70" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5"/>
 						<TextBlock Text="{Binding ProductQuantity}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
 						<Button Click="AddToBasket_Click" x:Name="basketButton" Content="Корзина" Cursor="Hand" HorizontalAlignment="Right" >
-							<Image Source="basket1.png"  Height="20"/>
+							<Image x:Name="BasketImage" Source="basket1.png"  Height="20"/>
 						</Button>
 						<Button Click="Edit_Click" Content="Редактировать" Cursor="Hand" Height="33" HorizontalContentAlignment="Center" FontFamily="Wellingthon" VerticalContentAlignment="Center" HorizontalAlignment="Right" />
 						<Button Click="Del_Click" Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" >
-							<Image Source="trash1.png" x:Name="BasketImage" Height="20"/>
+							<Image Source="trash1.png" x:Name="BasketImage1" Height="20"/>
 						</Button>
 					</StackPanel>
 				</DataTemplate>

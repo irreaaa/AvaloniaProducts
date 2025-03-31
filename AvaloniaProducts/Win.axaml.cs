@@ -32,12 +32,12 @@ public partial class Win : Window
         InitializeComponent();
         ProductListBox.ItemsSource = Products;
     }
-    private void AddToBasket_Click(object? sender, RoutedEventArgs e)
+    private void AddToBasket_Click(object sender, RoutedEventArgs e)
     {
         if (sender is Button button && button.DataContext is Product product)
         {
             basketList.AddToBasket(product.ProductName, 1);
-            if(basketList != null)
+            if (basketList != null)
             {
                 AddedMessage();
             }
@@ -71,9 +71,20 @@ public partial class Win : Window
 
     private void Basket_Click(object? sender, RoutedEventArgs e)
     {
-        BasketWindow basket = new BasketWindow();
-        basket.Show();
-        this.Close();
+        if(basketList.Basket.Count == 0)
+        {
+            var notificationManager = new WindowNotificationManager(this)
+            {
+                Position = NotificationPosition.BottomCenter
+            };
+            notificationManager.Show(new Notification("Ошибка", "Ваша корзина пуста.", NotificationType.Error));
+        }
+        else
+        {
+            BasketWindow basket = new BasketWindow();
+            basket.Show();
+            this.Close();
+        }
     }
 
     private void Return_Click(object? sender, RoutedEventArgs e)

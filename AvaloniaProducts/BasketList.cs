@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Controls.Notifications;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,16 +29,26 @@ namespace AvaloniaProducts
 
         public void AddToBasket(string productName, int productQuantityinBasket)
         {
-            var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == productName);
-
+            var productInStore = ProductList.Instance.Products?.FirstOrDefault(p => p.ProductName == productName);
             var productInBasket = Basket.FirstOrDefault(p => p.ProductName == productName);
-            if(productInBasket != null)
+
+            if (productInBasket != null)
             {
                 int availableToAdd = Math.Min(productQuantityinBasket, productInStore.ProductQuantity - productInBasket.ProductQuantity);
                 productInBasket.ProductQuantity += availableToAdd;
                 productInBasket.ProductCost = productInStore.ProductCost * productInBasket.ProductQuantity;
-            } else
+            }
+            else
             {
+                if (productInStore.ProductQuantity == 0)
+                {
+                    var notificationManager = new WindowNotificationManager()
+                    {
+                        Position = NotificationPosition.BottomCenter
+                    };
+                    notificationManager.Show(new Notification("Ошибка", "Такого продукта больше нет.", NotificationType.Error));
+                }
+
                 int availableToAdd = Math.Min(productQuantityinBasket, productInStore.ProductQuantity);
                 Basket.Add(new Product
                 {
@@ -46,6 +57,30 @@ namespace AvaloniaProducts
                     ProductQuantity = availableToAdd
                 });
             }
+        }
+
+        public void RemoveOneFromBasket(string productName, int productQuantityInBasket)
+        {
+            var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == productName);
+            var productInBasket = Basket.FirstOrDefault(p => p.ProductName == productName);
+
+            if (productInBasket != null)
+            {
+                int availableToRemoveOne = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
+                productInBasket.ProductQuantity -= availableToRemoveOne;
+                productInBasket.ProductCost = productInStore.ProductCost * productInBasket.ProductQuantity;
+            }
+            if (productInBasket == null)
+            {
+                RemoveFromBasket(productInBasket);
+            }
+                int availableToRemoveOne1 = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
+                Basket.Remove(new Product
+                {
+                    ProductName = productName,
+                    ProductCost = productInStore.ProductCost * availableToRemoveOne1,
+                    ProductQuantity = availableToRemoveOne1
+                });
         }
 
         public void RemoveFromBasket(Product product)
@@ -57,7 +92,7 @@ namespace AvaloniaProducts
         }
     }
 }
-
+// почеум при удалении продуктов, если количество продуктов = 0, то они не удаляются, а идут в минус?
 
 
 //using System;
