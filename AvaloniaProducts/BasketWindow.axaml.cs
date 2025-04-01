@@ -1,5 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using System;
@@ -21,7 +22,11 @@ namespace AvaloniaProducts
 
         private double CalculateTotal()
         {
+<<<<<<< HEAD
             return Basket.Sum(product => product.ProductCost);
+=======
+            return Basket.Sum(p => p.ProductCost);
+>>>>>>> 4f12617 (basket super)
         }
 
         private void UpdateTotal()
@@ -33,10 +38,23 @@ namespace AvaloniaProducts
         {
             if (sender is Button button && button.DataContext is Product product)
             {
+<<<<<<< HEAD
                 basketList.AddToBasket(product.ProductName, 1);
                 BasketListBox.ItemsSource = null;
                 BasketListBox.ItemsSource = Basket;
                 UpdateTotal();
+=======
+                if(product.ProductQuantity > 0)
+                {
+                    if (!basketList.AddToBasket(product.ProductName, 1))
+                    {
+                        NoMoreError();
+                    }
+                    BasketListBox.ItemsSource = null;
+                    BasketListBox.ItemsSource = Basket;
+                    UpdateTotal();
+                }
+>>>>>>> 4f12617 (basket super)
             }
         }
 
@@ -48,19 +66,26 @@ namespace AvaloniaProducts
 
                 BasketListBox.ItemsSource = null;
                 BasketListBox.ItemsSource = Basket;
+<<<<<<< HEAD
+=======
+                UpdateTotal();
+>>>>>>> 4f12617 (basket super)
 
                 if (Basket.Count == 0)
                 {
                     BasketListBox.ItemsSource = new List<string> { "Ваша корзина пуста." };
                 }
+<<<<<<< HEAD
                 UpdateTotal();
+=======
+>>>>>>> 4f12617 (basket super)
             }
         }
 
 
         private void RemoveFromBasket_Click(object? sender, RoutedEventArgs e)
         {
-            if(sender is Button button && button.DataContext is Product deleteProductFrombasket)
+            if (sender is Button button && button.DataContext is Product deleteProductFrombasket)
             {
                 BasketList.Instance.RemoveFromBasket(deleteProductFrombasket);
                 BasketListBox.ItemsSource = null;
@@ -79,6 +104,15 @@ namespace AvaloniaProducts
             Win win = new Win();
             win.Show();
             this.Close();
+        }
+
+        private void NoMoreError()
+        {
+            var notificationManager = new WindowNotificationManager(this)
+            {
+                Position = NotificationPosition.TopCenter
+            };
+            notificationManager.Show(new Notification("Ошибка", "Вы добавили максимально возможное количество товаров.", NotificationType.Error));
         }
     }
 }

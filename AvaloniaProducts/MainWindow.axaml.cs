@@ -29,7 +29,7 @@ public partial class MainWindow : Window
                 return;
             }
         }
-        if (enteredProductName == null)
+        if (enteredProductName == null || enteredProductName == "")
         {
             ShowNameErrorMessage();
             return;

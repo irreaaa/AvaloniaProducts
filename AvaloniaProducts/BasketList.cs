@@ -27,6 +27,7 @@ namespace AvaloniaProducts
             }
         }
 
+<<<<<<< HEAD
         public void AddToBasket(string productName, int productQuantityInBasket)
         {
             var productInStore = ProductList.Instance.Products?.FirstOrDefault(p => p.ProductName == productName);
@@ -40,7 +41,19 @@ namespace AvaloniaProducts
                 return;
             }
 
+=======
+        public bool AddToBasket(string productName, int productQuantityInBasket)
+        {
+>>>>>>> 4f12617 (basket super)
             var productInBasket = Basket.FirstOrDefault(p => p.ProductName == productName);
+            var productInStore = ProductList.Instance.Products.FirstOrDefault(p => p.ProductName == productName);
+
+            if (productInStore == null || productInStore.ProductQuantity == 0)
+            {
+                return false;
+            }
+
+            int availableToAdd = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
 
             int availableToAdd = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
 
@@ -54,12 +67,16 @@ namespace AvaloniaProducts
                 Basket.Add(new Product
                 {
                     ProductName = productName,
-                    ProductCost = productInStore.ProductCost * availableToAdd,
-                    ProductQuantity = availableToAdd
+                    ProductQuantity = availableToAdd,
+                    ProductCost = productInStore.ProductCost * availableToAdd
                 });
             }
 
             productInStore.ProductQuantity -= availableToAdd;
+<<<<<<< HEAD
+=======
+            return true;
+>>>>>>> 4f12617 (basket super)
         }
 
 
@@ -70,6 +87,7 @@ namespace AvaloniaProducts
 
             if (productInBasket == null) return;
 
+<<<<<<< HEAD
             if (productInStore != null)
             {
                 productInStore.ProductQuantity += productQuantityInBasket;
@@ -77,6 +95,15 @@ namespace AvaloniaProducts
 
             productInBasket.ProductQuantity -= productQuantityInBasket;
 
+=======
+            productInBasket.ProductQuantity -= productQuantityInBasket;
+            if (productInStore != null)
+            {
+                productInStore.ProductQuantity += productQuantityInBasket;
+                productInBasket.ProductCost = productInStore.ProductCost * productInBasket.ProductQuantity;
+            }
+
+>>>>>>> 4f12617 (basket super)
             if (productInBasket.ProductQuantity <= 0)
             {
                 Basket.RemoveAll(p => p.ProductName == productName);

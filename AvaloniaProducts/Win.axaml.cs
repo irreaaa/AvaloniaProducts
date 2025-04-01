@@ -1,4 +1,4 @@
-using Avalonia;
+п»їusing Avalonia;
 using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -32,15 +32,25 @@ public partial class Win : Window
         InitializeComponent();
         ProductListBox.ItemsSource = Products;
     }
+
     private void AddToBasket_Click(object sender, RoutedEventArgs e)
     {
         if (sender is Button button && button.DataContext is Product product)
         {
+<<<<<<< HEAD
             if (product.ProductQuantity == 0)
             {
                 NoMoreError();
             }
             if (product.ProductQuantity > 0)
+=======
+            if(product.ProductQuantity == 0)
+            {
+                NoMoreError();
+            }
+
+            if(product.ProductQuantity > 0)
+>>>>>>> 4f12617 (basket super)
             {
                 basketList.AddToBasket(product.ProductName, 1);
                 ProductListBox.ItemsSource = null;
@@ -61,7 +71,7 @@ public partial class Win : Window
         if (ProductList.Instance.Products.Count == 0)
         {
             ProductListBox.ItemsSource = null;
-            ProductListBox.ItemsSource = new List<string> { "Список продуктов пуст." };
+            ProductListBox.ItemsSource = new List<string> { "РЎРїРёСЃРѕРє РїСЂРѕРґСѓРєС‚РѕРІ РїСѓСЃС‚." };
         }
     }
 
@@ -83,7 +93,7 @@ public partial class Win : Window
             {
                 Position = NotificationPosition.BottomCenter
             };
-            notificationManager.Show(new Notification("Ошибка", "Ваша корзина пуста.", NotificationType.Error));
+            notificationManager.Show(new Notification("РћС€РёР±РєР°", "Р’Р°С€Р° РєРѕСЂР·РёРЅР° РїСѓСЃС‚Р°.", NotificationType.Error));
         }
         else
         {
@@ -104,17 +114,23 @@ public partial class Win : Window
     {
         var notificationManager = new WindowNotificationManager(this)
         {
-            Position = NotificationPosition.TopRight
+            Position = NotificationPosition.TopCenter
         };
-        notificationManager.Show(new Notification("Успешно", "Товар добавлен в корзину.", NotificationType.Success));
+        notificationManager.Show(new Notification("РЈСЃРїРµС€РЅРѕ", "РўРѕРІР°СЂ РґРѕР±Р°РІР»РµРЅ РІ РєРѕСЂР·РёРЅСѓ.", NotificationType.Success));
     }
 
     private void NoMoreError()
     {
         var notificationManager = new WindowNotificationManager(this)
         {
+<<<<<<< HEAD
             Position = NotificationPosition.TopRight
         };
         notificationManager.Show(new Notification("Ошибка", "Вы пытаетесь добавить больше, чем есть в магазине.", NotificationType.Error));
+=======
+            Position = NotificationPosition.TopCenter
+        };
+        notificationManager.Show(new Notification("РћС€РёР±РєР°", "РўР°РєРѕРіРѕ С‚РѕРІР°СЂР° Р±РѕР»СЊС€Рµ РЅРµС‚ РІ РЅР°Р»РёС‡РёРё.", NotificationType.Error));
+>>>>>>> 4f12617 (basket super)
     }
 }
