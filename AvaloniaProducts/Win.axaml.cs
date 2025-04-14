@@ -57,6 +57,8 @@ public partial class Win : Window
         if (sender is Button button && button.DataContext is Product deleteProduct)
         {
             ProductList.Instance.RemoveProduct(deleteProduct);
+            BasketList.Instance.RemoveFromBasket(deleteProduct);
+
             ProductListBox.ItemsSource = null;
             ProductListBox.ItemsSource = Products;
         }
