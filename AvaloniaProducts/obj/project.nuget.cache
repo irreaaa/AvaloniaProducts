@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rw0rElfPzgk=",
+  "dgSpecHash": "bWjz5Mrpsac=",
   "success": true,
-  "projectFilePath": "C:\\Users\\irisp\\source\\repos\\AvaloniaProductsList\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+  "projectFilePath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts1\\AvaloniaProducts\\AvaloniaProducts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\irisp\\.nuget\\packages\\avalonia\\11.2.1\\avalonia.11.2.1.nupkg.sha512",
     "C:\\Users\\irisp\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

@@ -37,20 +37,12 @@ public partial class Win : Window
     {
         if (sender is Button button && button.DataContext is Product product)
         {
-<<<<<<< HEAD
-            if (product.ProductQuantity == 0)
-            {
-                NoMoreError();
-            }
-            if (product.ProductQuantity > 0)
-=======
             if(product.ProductQuantity == 0)
             {
                 NoMoreError();
             }
 
             if(product.ProductQuantity > 0)
->>>>>>> 4f12617 (basket super)
             {
                 basketList.AddToBasket(product.ProductName, 1);
                 ProductListBox.ItemsSource = null;
@@ -123,14 +115,8 @@ public partial class Win : Window
     {
         var notificationManager = new WindowNotificationManager(this)
         {
-<<<<<<< HEAD
-            Position = NotificationPosition.TopRight
-        };
-        notificationManager.Show(new Notification("Îøèáêà", "Âû ïûòàåòåñü äîáàâèòü áîëüøå, ÷åì åñòü â ìàãàçèíå.", NotificationType.Error));
-=======
             Position = NotificationPosition.TopCenter
         };
         notificationManager.Show(new Notification("ÐžÑˆÐ¸Ð±ÐºÐ°", "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ñ‚Ð¾Ð²Ð°Ñ€Ð° Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½ÐµÑ‚ Ð² Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ð¸.", NotificationType.Error));
->>>>>>> 4f12617 (basket super)
     }
 }

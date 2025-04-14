@@ -269,3 +269,14 @@ C:\Users\irisp\source\repos\AvaloniaProductsList\AvaloniaProducts\AvaloniaProduc
 C:\Users\irisp\source\repos\AvaloniaProductsList\AvaloniaProducts\AvaloniaProducts\obj\Debug\net8.0\Avalonia.996F5F03.Up2Date
 C:\Users\irisp\source\repos\AvaloniaProductsList\AvaloniaProducts\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.genruntimeconfig.cache
 C:\Users\irisp\source\repos\AvaloniaProductsList\AvaloniaProducts\AvaloniaProducts\obj\Debug\net8.0\ref\AvaloniaProducts.dll
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.csproj.AssemblyReference.cache
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\Avalonia\Resources.Inputs.cache
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.dll
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\refint\AvaloniaProducts.dll
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.pdb
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\Avalonia\resources
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.AssemblyInfoInputs.cache
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.AssemblyInfo.cs
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.csproj.CoreCompileInputs.cache
+C:\Users\irisp\Source\Repos\AvaloniaProducts1\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.sourcelink.json

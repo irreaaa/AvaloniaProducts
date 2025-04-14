@@ -22,11 +22,7 @@ namespace AvaloniaProducts
 
         private double CalculateTotal()
         {
-<<<<<<< HEAD
-            return Basket.Sum(product => product.ProductCost);
-=======
             return Basket.Sum(p => p.ProductCost);
->>>>>>> 4f12617 (basket super)
         }
 
         private void UpdateTotal()
@@ -38,12 +34,6 @@ namespace AvaloniaProducts
         {
             if (sender is Button button && button.DataContext is Product product)
             {
-<<<<<<< HEAD
-                basketList.AddToBasket(product.ProductName, 1);
-                BasketListBox.ItemsSource = null;
-                BasketListBox.ItemsSource = Basket;
-                UpdateTotal();
-=======
                 if(product.ProductQuantity > 0)
                 {
                     if (!basketList.AddToBasket(product.ProductName, 1))
@@ -54,7 +44,6 @@ namespace AvaloniaProducts
                     BasketListBox.ItemsSource = Basket;
                     UpdateTotal();
                 }
->>>>>>> 4f12617 (basket super)
             }
         }
 
@@ -66,19 +55,12 @@ namespace AvaloniaProducts
 
                 BasketListBox.ItemsSource = null;
                 BasketListBox.ItemsSource = Basket;
-<<<<<<< HEAD
-=======
                 UpdateTotal();
->>>>>>> 4f12617 (basket super)
 
                 if (Basket.Count == 0)
                 {
                     BasketListBox.ItemsSource = new List<string> { "Ваша корзина пуста." };
                 }
-<<<<<<< HEAD
-                UpdateTotal();
-=======
->>>>>>> 4f12617 (basket super)
             }
         }
 

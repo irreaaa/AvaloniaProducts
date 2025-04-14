@@ -14,67 +14,39 @@
 			<Setter Property="BorderThickness" Value="1"/>
 			<Setter Property="CornerRadius" Value="10"/>
 		</Style>
-		<Style Selector="StackPanel > Button:pointerover  /template/ ContentPresenter">
+		<Style Selector="StackPanel > Button:pointerover">
 			<Setter Property="Foreground" Value="#cadbed"/>
 			<Setter Property="BorderBrush" Value="#4478ab"/>
-			<Setter Property="Background" Value="#4478ab" />
-			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="Background" Value="#4478ab"/>
 		</Style>
 	</Window.Styles>
 	<StackPanel>
-<<<<<<< HEAD
-		<TextBlock Text="Ваша корзина: " FontWeight="ExtraBold" FontSize="28" FontFamily="Wellingthon" Foreground="#326da8" Margin="20" />
-		<ListBox Name="BasketListBox" SelectionMode="Single">
-			<ListBox.ItemTemplate>
-				<DataTemplate DataType="local:Product">
-					<StackPanel Orientation="Horizontal" Spacing="10">
-						<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" Foreground="#326da8" Margin="5"/>
-						<TextBlock Text=" x" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5"/>
-						<Button Click="RemoveOneFromBasket_Click" Content="-" Cursor="Hand" />
-						<TextBlock Text="{Binding ProductQuantity}" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-						<Button Click="AddMoreToBasket_Click" Content="+" Cursor="Hand" />
-						<TextBlock Text="=" Width="30" FontSize="19" HorizontalAlignment="Right" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-						<TextBlock Text="{Binding ProductCost}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-						<Button Click="RemoveFromBasket_Click" Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" >
-							<Image Source="trash1.png" x:Name="BasketImage" Height="20"/>
-						</Button>
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
-		<TextBlock x:Name="TotalTextBlock" Text="Итого: 0 ₽" FontSize="19" HorizontalAlignment="Left"
-           FontFamily="Wellingthon" Foreground="#326da8" Margin="20 10 0 5" />
-		<Button Content="Вернуться ->" FontFamily="Wellingthon" Cursor="Hand" Width="150" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" Margin="20 10 5 5" Click="Return_Click"/>
-	</StackPanel>
-</Window>
-=======
 		<Border MaxWidth="1970" MaxHeight="700">
 			<ScrollViewer VerticalScrollBarVisibility="Auto">
-					<StackPanel Orientation="Vertical">
-						<TextBlock Text="Ваша корзина: " FontWeight="ExtraBold" FontSize="28" FontFamily="Wellingthon" Foreground="#326da8" Margin="20" />
-						<ListBox Name="BasketListBox" SelectionMode="Single">
-							<ListBox.ItemTemplate>
-								<DataTemplate DataType="local:Product">
-									<StackPanel Orientation="Horizontal" Spacing="10">
-										<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" Foreground="#326da8" Margin="5"/>
-										<TextBlock Text=" x" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5"/>
-										<Button Click="RemoveOneFromBasket_Click" Content="-" Cursor="Hand" />
-										<TextBlock Text="{Binding ProductQuantity}" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-										<Button Click="AddMoreToBasket_Click" Content="+" Cursor="Hand" />
-										<TextBlock Text="=" Width="30" FontSize="19" HorizontalAlignment="Right" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-										<TextBlock Text="{Binding ProductCost}" Width="100" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
-										<Button Click="RemoveFromBasket_Click" Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" >
-											<Image Source="trash1.png" x:Name="BasketImage" Height="20"/>
-										</Button>
-									</StackPanel>
-								</DataTemplate>
-							</ListBox.ItemTemplate>
-						</ListBox>
-						<TextBlock x:Name="TotalTextBlock" Text="Итого: 0 ₽" FontSize="19" HorizontalAlignment="Left" FontFamily="Wellingthon" Foreground="#326da8" Margin="20 10 0 5" />
-						<Button Content="Вернуться ->" FontFamily="Wellingthon" Cursor="Hand" Width="150" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" Margin="20 10 5 5" Click="Return_Click"/>
+				<StackPanel Orientation="Vertical">
+					<TextBlock Text="Ваша корзина: " FontWeight="ExtraBold" FontSize="28" FontFamily="Wellingthon" Foreground="#326da8" Margin="20" />
+					<ListBox Name="BasketListBox" SelectionMode="Single">
+						<ListBox.ItemTemplate>
+							<DataTemplate DataType="local:Product">
+								<StackPanel Orientation="Horizontal" Spacing="10">
+									<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" Foreground="#326da8" Margin="5"/>
+									<TextBlock Text=" x" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5"/>
+									<Button Click="RemoveOneFromBasket_Click" Content="-" Cursor="Hand" />
+									<TextBlock Text="{Binding ProductQuantity}" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
+									<Button Click="AddMoreToBasket_Click" Content="+" Cursor="Hand" />
+									<TextBlock Text="=" Width="30" FontSize="19" HorizontalAlignment="Right" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
+									<TextBlock Text="{Binding ProductCost}" Width="100" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" />
+									<Button Click="RemoveFromBasket_Click" Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" >
+										<Image Source="trash1.png" x:Name="BasketImage" Height="20"/>
+									</Button>
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+					<TextBlock x:Name="TotalTextBlock" Text="Итого: 0 ₽" FontSize="19" HorizontalAlignment="Left" FontFamily="Wellingthon" Foreground="#326da8" Margin="20 10 0 5" />
+					<Button Content="Вернуться ->" FontFamily="Wellingthon" Cursor="Hand" Width="150" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18" Margin="20 10 5 5" Click="Return_Click"/>
 				</StackPanel>
 			</ScrollViewer>
 		</Border>
 	</StackPanel>
 </Window>
->>>>>>> 4f12617 (basket super)
