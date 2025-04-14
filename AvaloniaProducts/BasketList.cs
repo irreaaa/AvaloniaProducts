@@ -40,8 +40,6 @@ public bool AddToBasket(string productName, int productQuantityInBasket)
 
             int availableToAdd = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
 
-            int availableToAdd = Math.Min(productQuantityInBasket, productInStore.ProductQuantity);
-
             if (productInBasket != null)
             {
                 productInBasket.ProductQuantity += availableToAdd;
