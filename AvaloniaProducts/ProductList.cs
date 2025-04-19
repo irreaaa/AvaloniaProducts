@@ -24,7 +24,6 @@ namespace AvaloniaProducts
                     _instance = new ProductList();
                 return _instance;
             }
-
         }
 
         public void AddProduct(string productName, double productCost, int productQuantity)
@@ -37,6 +36,7 @@ namespace AvaloniaProducts
             if (product != null && Products.Contains(product))
             {
                 Products.Remove(product);
+                BasketList.Instance.RemoveFromBasket(product);
             }
         }
     }

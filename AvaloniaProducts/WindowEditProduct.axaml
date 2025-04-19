@@ -31,4 +31,3 @@
 		<Button Name="ReturnButton" Cursor="Hand" HorizontalAlignment="Center" Content="Вернуться ->" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="Return_Click"/>
 	</StackPanel>
 </Window>
-

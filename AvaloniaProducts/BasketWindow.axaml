@@ -14,7 +14,7 @@
 			<Setter Property="BorderThickness" Value="1"/>
 			<Setter Property="CornerRadius" Value="10"/>
 		</Style>
-		<Style Selector="StackPanel > Button:pointerover">
+		<Style Selector="StackPanel > Button:pointerover  /template/ ContentPresenter">
 			<Setter Property="Foreground" Value="#cadbed"/>
 			<Setter Property="BorderBrush" Value="#4478ab"/>
 			<Setter Property="Background" Value="#4478ab"/>

@@ -34,7 +34,7 @@ namespace AvaloniaProducts
         {
             if (sender is Button button && button.DataContext is Product product)
             {
-                if(product.ProductQuantity > 0)
+                if (product.ProductQuantity > 0)
                 {
                     if (!basketList.AddToBasket(product.ProductName, 1))
                     {

@@ -37,12 +37,12 @@ public partial class Win : Window
     {
         if (sender is Button button && button.DataContext is Product product)
         {
-            if(product.ProductQuantity == 0)
+            if (product.ProductQuantity == 0)
             {
                 NoMoreError();
             }
 
-            if(product.ProductQuantity > 0)
+            if (product.ProductQuantity > 0)
             {
                 basketList.AddToBasket(product.ProductName, 1);
                 ProductListBox.ItemsSource = null;
@@ -81,7 +81,9 @@ public partial class Win : Window
 
     private void Basket_Click(object? sender, RoutedEventArgs e)
     {
-        if(basketList.Basket.Count == 0)
+        var productsInStore = ProductList.Instance.Products.Select(p => p.ProductName).ToHashSet();
+        basketList.Basket.RemoveAll(p => !productsInStore.Contains(p.ProductName));
+        if (basketList.Basket.Count == 0)
         {
             var notificationManager = new WindowNotificationManager(this)
             {

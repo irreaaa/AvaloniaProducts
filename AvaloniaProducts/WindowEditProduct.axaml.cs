@@ -1,9 +1,10 @@
-using Avalonia;
+п»їusing Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace AvaloniaProducts;
 
@@ -28,7 +29,13 @@ public partial class WinEditProduct : Window
         var costTextBox = this.FindControl<TextBox>("ProductCostTextBox");
         var quantityTextBox = this.FindControl<TextBox>("ProductQuantityTextBox");
 
-        foreach (var product in productList.Products)
+        if (nameTextBox == null || string.IsNullOrWhiteSpace(nameTextBox.Text))
+        {
+            ShowNameErrorMessage();
+            return;
+        }
+
+        foreach (var product in productList.Products.Where(p => p != _product))
         {
             if (product.ProductName == nameTextBox.Text)
             {
@@ -36,35 +43,44 @@ public partial class WinEditProduct : Window
                 return;
             }
         }
+
         if (!double.TryParse(costTextBox.Text, out double newCost) || newCost <= 0)
         {
             ShowCostErrorMessage();
             return;
         }
+
         if (!int.TryParse(quantityTextBox.Text, out int newQuantity) || newQuantity <= 0)
         {
             ShowQuantityErrorMessage();
             return;
         }
-        if(nameTextBox == null || nameTextBox.Text == "")
+
+        string oldName = _product.ProductName;
+
+        _product.ProductName = nameTextBox.Text;
+        _product.ProductCost = newCost;
+        _product.ProductQuantity = newQuantity;
+
+        var productsInBasket = BasketList.Instance.Basket;
+        foreach (var productInBasket in productsInBasket)
         {
-            ShowNameErrorMessage();
+            if (productInBasket.ProductName == oldName)
+            {
+                productInBasket.ProductName = _product.ProductName;
+                productInBasket.ProductCost = _product.ProductCost;
+            }
         }
-        else
-        {
-            _product.ProductName = nameTextBox.Text;
-            _product.ProductCost = newCost;
-            _product.ProductQuantity = newQuantity;
-            Win Win = new Win();
-            Win.Show();
-            this.Close();
-        }
+
+        Win win = new Win();
+        win.Show();
+        this.Close();
     }
 
     private void Return_Click(object? sender, RoutedEventArgs e)
     {
-        Win Win = new Win();
-        Win.Show();
+        Win win = new Win();
+        win.Show();
         this.Close();
     }
 
@@ -74,7 +90,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("Ошибка", "Некорректная цена продукта.", NotificationType.Error));
+        notificationManager.Show(new Notification("пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.", NotificationType.Error));
     }
     private void ShowQuantityErrorMessage()
     {
@@ -82,7 +98,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("Ошибка", "Некорректное количетво продукта.", NotificationType.Error));
+        notificationManager.Show(new Notification("пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.", NotificationType.Error));
     }
     private void ShowNameErrorMessage()
     {
@@ -90,7 +106,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("Ошибка", "Товар без названия.", NotificationType.Error));
+        notificationManager.Show(new Notification("пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.", NotificationType.Error));
     }
     private void ShowDoubleErrorMessage()
     {
@@ -98,6 +114,6 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("Ошибка", "Такой продукт уже есть.", NotificationType.Error));
+        notificationManager.Show(new Notification("пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ.", NotificationType.Error));
     }
 }

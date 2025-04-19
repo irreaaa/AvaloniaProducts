@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts2\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
+    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts123\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts2\\AvaloniaProducts\\AvaloniaProducts.csproj": {
+    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts123\\AvaloniaProducts\\AvaloniaProducts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts2\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "projectUniqueName": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts123\\AvaloniaProducts\\AvaloniaProducts.csproj",
         "projectName": "AvaloniaProducts",
-        "projectPath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts2\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "projectPath": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts123\\AvaloniaProducts\\AvaloniaProducts.csproj",
         "packagesPath": "C:\\Users\\irisp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts2\\AvaloniaProducts\\obj\\",
+        "outputPath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts123\\AvaloniaProducts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

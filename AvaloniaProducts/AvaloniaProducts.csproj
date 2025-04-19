@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="basket.png" />
     <None Remove="basket1.png" />
+    <None Remove="basket2.png" />
     <None Remove="done.png" />
     <None Remove="return.png" />
     <None Remove="trash.png" />
@@ -19,6 +20,7 @@
   <ItemGroup>
     <AvaloniaResource Include="basket.png" />
     <AvaloniaResource Include="basket1.png" />
+    <AvaloniaResource Include="basket2.png" />
     <AvaloniaResource Include="done.png" />
     <AvaloniaResource Include="return.png" />
     <AvaloniaResource Include="trash.png" />
