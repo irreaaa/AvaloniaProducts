@@ -36,7 +36,7 @@
 									<TextBlock Text="{Binding ProductQuantity}" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
 									<Button Click="AddMoreToBasket_Click" Content="+" Cursor="Hand" VerticalAlignment="Center"/>
 									<TextBlock Text="=" Width="30" FontSize="19" HorizontalAlignment="Right" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
-									<TextBlock Text="{Binding ProductCost}" Width="100" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center" />
+									<TextBlock Text="{Binding ProductCost, StringFormat={}{0} руб.}" Width="100" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center" />
 									<Button Click="RemoveFromBasket_Click" Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Center" >
 										<Image Source="trash1.png" x:Name="BasketImage" Height="20"/>
 									</Button>

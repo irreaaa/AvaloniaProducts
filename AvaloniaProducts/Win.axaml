@@ -34,9 +34,9 @@
 									<Image Source="avares://AvaloniaProducts/images/hp.jpg" Height="50" VerticalAlignment="Center"/>
 									<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5" VerticalAlignment="Center"/>
 									<TextBlock Text=" Цена:" Width="55" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5" VerticalAlignment="Center"/>
-									<TextBlock Text="{Binding ProductCost}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
+									<TextBlock Text="{Binding ProductCost, StringFormat={}{0} руб.}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
 									<TextBlock Text=" Кол-во:" Width="70" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5" VerticalAlignment="Center"/>
-									<TextBlock Text="{Binding ProductQuantity}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
+									<TextBlock Text="{Binding ProductQuantity, StringFormat={}{0} шт.}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>
 									<Button Click="AddToBasket_Click" x:Name="basketButton" Content="Корзина" Cursor="Hand" HorizontalAlignment="Right" >
 										<Image x:Name="BasketImage" Source="basket2.png"  Height="20"/>
 									</Button>
