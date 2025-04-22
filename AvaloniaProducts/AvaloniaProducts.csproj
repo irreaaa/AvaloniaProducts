@@ -12,6 +12,7 @@
     <None Remove="basket1.png" />
     <None Remove="basket2.png" />
     <None Remove="done.png" />
+    <None Remove="images\hp.jpg" />
     <None Remove="return.png" />
     <None Remove="trash.png" />
     <None Remove="trash1.png" />
@@ -22,6 +23,7 @@
     <AvaloniaResource Include="basket1.png" />
     <AvaloniaResource Include="basket2.png" />
     <AvaloniaResource Include="done.png" />
+    <AvaloniaResource Include="images\hp.jpg" />
     <AvaloniaResource Include="return.png" />
     <AvaloniaResource Include="trash.png" />
     <AvaloniaResource Include="trash1.png" />

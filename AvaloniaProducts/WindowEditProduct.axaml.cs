@@ -68,7 +68,7 @@ public partial class WinEditProduct : Window
             if (productInBasket.ProductName == oldName)
             {
                 productInBasket.ProductName = _product.ProductName;
-                productInBasket.ProductCost = _product.ProductCost;
+                productInBasket.ProductCost = _product.ProductCost * _product.ProductQuantity;
             }
         }
 
@@ -90,7 +90,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("������", "������������ ���� ��������.", NotificationType.Error));
+        notificationManager.Show(new Notification("Ошибка", "Некорректная цена товара.", NotificationType.Error));
     }
     private void ShowQuantityErrorMessage()
     {
@@ -98,7 +98,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("������", "������������ ���������� ��������.", NotificationType.Error));
+        notificationManager.Show(new Notification("Ошибка", "Некорректное количество товара.", NotificationType.Error));
     }
     private void ShowNameErrorMessage()
     {
@@ -106,7 +106,7 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("������", "����� ��� ��������.", NotificationType.Error));
+        notificationManager.Show(new Notification("Ошибка", "Товар без названия.", NotificationType.Error));
     }
     private void ShowDoubleErrorMessage()
     {
@@ -114,6 +114,6 @@ public partial class WinEditProduct : Window
         {
             Position = NotificationPosition.BottomCenter
         };
-        notificationManager.Show(new Notification("������", "����� ������� ��� ����.", NotificationType.Error));
+        notificationManager.Show(new Notification("Ошибка", "Такой продукт уже есть.", NotificationType.Error));
     }
 }

@@ -19,6 +19,7 @@ using System.Collections.ObjectModel;
 using Avalonia.Controls.Notifications;
 using Avalonia.Media.Imaging;
 using System.Windows.Input;
+using Avalonia.Platform;
 
 namespace AvaloniaProducts;
 
@@ -32,6 +33,9 @@ public partial class Win : Window
         InitializeComponent();
         ProductListBox.ItemsSource = Products;
     }
+
+    //public Bitmap? ImageFromBinding { get; } = ImageHelper.LoadFromResources(new Uri("avares://LoadingImages/Assets/hp.jgp"));
+    //public Task<Bitmap?> ImageFromWebsite { get; } = ImageHelper.LoadFromWeb(new Uri("https://foni.papik.pro/uploads/posts/2024-09/foni-papik-pro-df23-p-kartinki-produkti-na-prozrachnom-fone-5.png"));
 
     private void AddToBasket_Click(object sender, RoutedEventArgs e)
     {
