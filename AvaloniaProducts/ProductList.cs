@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AvaloniaProducts
 {
@@ -28,7 +24,7 @@ namespace AvaloniaProducts
 
         public void AddProduct(string productName, double productCost, int productQuantity)
         {
-            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity });
+            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity, ImagePath = "avares://AvaloniaProducts/LoadingImages/Assets/hp.jpg" });
         }
 
         public void RemoveProduct(Product product)

@@ -1,9 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace AvaloniaProducts;
@@ -68,7 +65,7 @@ public partial class WinEditProduct : Window
             if (productInBasket.ProductName == oldName)
             {
                 productInBasket.ProductName = _product.ProductName;
-                productInBasket.ProductCost = _product.ProductCost * _product.ProductQuantity;
+                productInBasket.ProductCost = _product.ProductCost * productInBasket.ProductQuantity;
             }
         }
 

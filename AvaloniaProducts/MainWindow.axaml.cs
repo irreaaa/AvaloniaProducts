@@ -1,11 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Xml.Linq;
 
 namespace AvaloniaProducts;
 

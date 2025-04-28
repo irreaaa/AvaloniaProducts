@@ -1,25 +1,10 @@
-﻿using Avalonia;
-using System;
+﻿using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Media;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Numerics;
-using Avalonia.Controls.Shapes;
-using Avalonia.OpenGL;
-using Avalonia.Markup.Xaml.Templates;
-using Avalonia.Styling;
-using System.Reflection.Metadata;
-using System.Data.Common;
-using Avalonia.Markup.Xaml.MarkupExtensions;
-using System.Collections.ObjectModel;
 using Avalonia.Controls.Notifications;
 using Avalonia.Media.Imaging;
-using System.Windows.Input;
-using Avalonia.Platform;
 
 namespace AvaloniaProducts;
 
@@ -27,15 +12,14 @@ public partial class Win : Window
 {
     public List<Product> Products => ProductList.Instance.Products;
     private BasketList basketList = BasketList.Instance;
+    public Bitmap? ImageFromBinding { get; } = ImageHelper.LoadFromResources(new Uri("avares://AvaloniaProducts/LoadingImages/Assets/hp.jpg"));
+
 
     public Win()
     {
         InitializeComponent();
         ProductListBox.ItemsSource = Products;
     }
-
-    //public Bitmap? ImageFromBinding { get; } = ImageHelper.LoadFromResources(new Uri("avares://LoadingImages/Assets/hp.jgp"));
-    //public Task<Bitmap?> ImageFromWebsite { get; } = ImageHelper.LoadFromWeb(new Uri("https://foni.papik.pro/uploads/posts/2024-09/foni-papik-pro-df23-p-kartinki-produkti-na-prozrachnom-fone-5.png"));
 
     private void AddToBasket_Click(object sender, RoutedEventArgs e)
     {

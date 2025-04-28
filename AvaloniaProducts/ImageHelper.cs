@@ -1,12 +1,8 @@
-﻿using Avalonia.Controls.Notifications;
-using Avalonia.Media.Imaging;
+﻿using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace AvaloniaProducts
@@ -37,3 +33,6 @@ namespace AvaloniaProducts
         }
     }
 }
+
+// что не так, почему возникает эта ошибка? пути расположения файлов указано правильно
+// обязательно ли добавлять Bitmap в класс продуктов? без этого вылезает ошибка с биндингами, что в авалонияПродукт нет такого. можно ли как-то это исправить, не добавляя его в класс продукт?
