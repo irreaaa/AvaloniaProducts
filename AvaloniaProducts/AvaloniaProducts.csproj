@@ -11,7 +11,11 @@
     <None Remove="basket.png" />
     <None Remove="basket1.png" />
     <None Remove="basket2.png" />
+    <None Remove="basket3.png" />
     <None Remove="done.png" />
+    <None Remove="edit.png" />
+    <None Remove="edit1.png" />
+    <None Remove="edit2.png" />
     <None Remove="images\hp.jpg" />
     <None Remove="LoadingImages\Assets\hp.jpg" />
     <None Remove="LoadingImages\Assets\ip.jpg" />
@@ -26,7 +30,11 @@
     <AvaloniaResource Include="basket.png" />
     <AvaloniaResource Include="basket1.png" />
     <AvaloniaResource Include="basket2.png" />
+    <AvaloniaResource Include="basket3.png" />
     <AvaloniaResource Include="done.png" />
+    <AvaloniaResource Include="edit.png" />
+    <AvaloniaResource Include="edit1.png" />
+    <AvaloniaResource Include="edit2.png" />
     <AvaloniaResource Include="images\hp.jpg" />
     <AvaloniaResource Include="LoadingImages\Assets\hp.jpg" />
     <AvaloniaResource Include="LoadingImages\Assets\ip.jpg" />

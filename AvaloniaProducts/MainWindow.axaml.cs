@@ -107,4 +107,8 @@ public partial class MainWindow : Window
         };
         notificationManager.Show(new Notification("Ошибка", "Товар без названия.", NotificationType.Error));
     }
+
+    private void TextBox_KeyUp(object? sender, Avalonia.Input.KeyEventArgs e)
+    {
+    }
 }

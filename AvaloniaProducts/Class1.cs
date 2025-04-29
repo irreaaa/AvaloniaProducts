@@ -9,6 +9,6 @@ public class Product
     public double ProductCost { get; set; }
     public int ProductQuantity { get; set; }
     
-    public string ImagePath { get; set; }
+    //public string ImagePath { get; set; }
 
 }

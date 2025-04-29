@@ -35,7 +35,7 @@
 			</StackPanel>
 			<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
 				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 15 5 5" Click="BtnAddProduct_Click" />
-				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Показать все продкуты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
+				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Показать все продукты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
 			</StackPanel>
 		</StackPanel>
 	</Grid>

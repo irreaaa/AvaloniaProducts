@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BqHZfO0bx8A=",
+  "dgSpecHash": "xjdm8qJ8tYQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\blockchain\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+  "projectFilePath": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\blockchain\\.nuget\\packages\\avalonia\\11.2.1\\avalonia.11.2.1.nupkg.sha512",
     "C:\\Users\\blockchain\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
