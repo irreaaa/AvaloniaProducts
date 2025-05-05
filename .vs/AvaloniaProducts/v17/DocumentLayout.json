@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\basketlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\basketlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\mwvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\mwvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\basketwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\basketwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\win.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
@@ -31,24 +31,16 @@
       "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\win.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\basketlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\basketlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\basketwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\basketwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\basketwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\basketwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\windoweditproduct.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
       "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\windoweditproduct.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|solutionrelative:avaloniaproducts\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2768D9BB-E370-42C2-B580-32D7A6336B29}|AvaloniaProducts\\AvaloniaProducts.csproj|c:\\users\\blockchain\\source\\repos\\avaloniaproducts\\avaloniaproducts\\windoweditproduct.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,33 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MWVM.cs",
-              "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\MWVM.cs",
-              "RelativeDocumentMoniker": "AvaloniaProducts\\MWVM.cs",
-              "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\MWVM.cs",
-              "RelativeToolTip": "AvaloniaProducts\\MWVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T08:36:52.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ImageHelper.cs",
-              "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\ImageHelper.cs",
-              "RelativeDocumentMoniker": "AvaloniaProducts\\ImageHelper.cs",
-              "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\ImageHelper.cs",
-              "RelativeToolTip": "AvaloniaProducts\\ImageHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T08:54:05.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\MainWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaProducts\\MainWindow.axaml",
@@ -112,20 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml.cs",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "AvaloniaProducts\\MainWindow.axaml.cs",
               "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\MainWindow.axaml.cs",
               "RelativeToolTip": "AvaloniaProducts\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T10:36:57.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "BasketList.cs",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\BasketList.cs",
               "RelativeDocumentMoniker": "AvaloniaProducts\\BasketList.cs",
@@ -133,12 +99,11 @@
               "RelativeToolTip": "AvaloniaProducts\\BasketList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T08:15:30.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T08:15:30.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "BasketWindow.axaml",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\BasketWindow.axaml",
               "RelativeDocumentMoniker": "AvaloniaProducts\\BasketWindow.axaml",
@@ -158,18 +123,17 @@
               "RelativeToolTip": "AvaloniaProducts\\BasketWindow.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:22:57.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T07:22:57.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\Class1.cs",
               "RelativeDocumentMoniker": "AvaloniaProducts\\Class1.cs",
               "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\Class1.cs",
               "RelativeToolTip": "AvaloniaProducts\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T07:22:57.169Z",
               "EditorCaption": ""
@@ -196,24 +160,22 @@
               "RelativeToolTip": "AvaloniaProducts\\Win.axaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:22:57.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T07:22:57.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "WindowEditProduct.axaml",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\WindowEditProduct.axaml",
               "RelativeDocumentMoniker": "AvaloniaProducts\\WindowEditProduct.axaml",
               "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\WindowEditProduct.axaml",
               "RelativeToolTip": "AvaloniaProducts\\WindowEditProduct.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-14T07:22:57.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T07:22:57.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "WindowEditProduct.axaml.cs",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\WindowEditProduct.axaml.cs",
               "RelativeDocumentMoniker": "AvaloniaProducts\\WindowEditProduct.axaml.cs",
@@ -225,13 +187,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "ProductList.cs",
               "DocumentMoniker": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\ProductList.cs",
               "RelativeDocumentMoniker": "AvaloniaProducts\\ProductList.cs",
               "ToolTip": "C:\\Users\\blockchain\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\ProductList.cs",
               "RelativeToolTip": "AvaloniaProducts\\ProductList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T07:22:57.171Z",
               "EditorCaption": ""

@@ -21,7 +21,7 @@
 		</Style>
 	</Window.Styles>
 	<Grid Margin="10">
-		<StackPanel Height="530" Width="1000" Background="#cadbed">
+		<StackPanel Height="600" Width="1000" Background="#cadbed">
 			<StackPanel HorizontalAlignment="Center">
 				<TextBlock Text="Добавление продуктов" FontWeight="ExtraBold" FontSize="48" FontFamily="Wellingthon" Foreground="#326da8" Margin="20"/>
 			</StackPanel>
@@ -34,7 +34,8 @@
 				<TextBox Name="TextBoxQuantity" Watermark="введите количество..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
 			</StackPanel>
 			<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 15 5 5" Click="BtnAddProduct_Click" />
+				<Button Name="btnAddImage" Cursor="Hand" Content="Добавить картинку к продукту" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 15 5 5" Click="AddImage_Click" />
+				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnAddProduct_Click" />
 				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Показать все продукты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
 			</StackPanel>
 		</StackPanel>

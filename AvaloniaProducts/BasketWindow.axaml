@@ -29,7 +29,7 @@
 						<ListBox.ItemTemplate>
 							<DataTemplate DataType="local:Product">
 								<StackPanel Orientation="Horizontal" Spacing="10">
-									<Image Source="avares://AvaloniaProducts/images/hp.jpg" Height="50" VerticalAlignment="Center"/>
+									<Image Source="{Binding ProductImage}" Height="50" VerticalAlignment="Center"/>
 									<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" Foreground="#326da8" Margin="5" VerticalAlignment="Center"/>
 									<TextBlock Text=" x" Width="30" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5" VerticalAlignment="Center"/>
 									<Button Click="RemoveOneFromBasket_Click" Content="-" Cursor="Hand" VerticalAlignment="Center"/>

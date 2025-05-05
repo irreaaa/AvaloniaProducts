@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Avalonia.Media.Imaging;
+using System;
+using System.Collections.Generic;
 
 namespace AvaloniaProducts
 {
@@ -24,8 +26,7 @@ namespace AvaloniaProducts
 
         public void AddProduct(string productName, double productCost, int productQuantity)
         {
-            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity,
-                //ImagePath = "avares://AvaloniaProducts/LoadingImages/Assets/hp.jpg"
+            Products.Add(new Product { ProductName = productName, ProductCost = productCost, ProductQuantity = productQuantity
                 });
         }
 

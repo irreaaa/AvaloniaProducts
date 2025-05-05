@@ -1,6 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
+using System;
 
 namespace AvaloniaProducts;
 
@@ -10,6 +12,11 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private async void AddImage_Click(object? sender, RoutedEventArgs e)
+    {
+        new Window().ShowDialog(this);
     }
 
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
