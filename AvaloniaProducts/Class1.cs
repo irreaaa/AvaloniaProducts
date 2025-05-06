@@ -16,7 +16,7 @@ public class Product
         {
             if (ProductPhoto != "" && ProductPhoto != " " && ProductPhoto != null)
             {
-                return new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "AvaloniaProducts/Images/" + ProductPhoto);
+                return new Bitmap(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/" + ProductPhoto);
             }
             else
             {

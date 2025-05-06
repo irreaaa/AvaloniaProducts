@@ -3,6 +3,7 @@ using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
 using System;
+using System.IO;
 
 namespace AvaloniaProducts;
 
@@ -14,16 +15,36 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    private string _photo;
     private async void AddImage_Click(object? sender, RoutedEventArgs e)
     {
-        new Window().ShowDialog(this);
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        try
+        {
+            var dialog = await openFileDialog.ShowAsync(this);
+            string fileName = String.Join("", dialog);
+            Random random = new Random();
+            string photo = "photo" + random.Next(1, 1000) + ".jpg";
+
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../Images/", photo);
+            File.Copy(fileName, AppDomain.CurrentDomain.BaseDirectory + "../../../Images/" + photo, true);
+            _photo = photo;
+            Bitmap productImageBitmap = new Bitmap(path);
+            ProductImage.Source = productImageBitmap;
+            btnAddImage.Content = "Выбрать другое фото";
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+        }
     }
 
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = TextBoxName.Text;
+        string addedImage = Convert.ToString(ProductImage.Source);
 
-        foreach(var product in productList.Products)
+        foreach (var product in productList.Products)
         {
             if (product.ProductName == enteredProductName)
             {
@@ -31,7 +52,7 @@ public partial class MainWindow : Window
                 return;
             }
         }
-        if (enteredProductName == null || enteredProductName == "")
+        if ( string.IsNullOrWhiteSpace(enteredProductName))
         {
             ShowNameErrorMessage();
             return;
@@ -48,11 +69,13 @@ public partial class MainWindow : Window
         }
         else
         {
-            productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct);
+            productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct, addedImage);
 
             TextBoxName.Text = "";
             TextBoxCost.Text = "";
             TextBoxQuantity.Text = "";
+            btnAddImage.Content = "+ фото продукта";
+            ProductImage.Source = null;
         }
     }
 

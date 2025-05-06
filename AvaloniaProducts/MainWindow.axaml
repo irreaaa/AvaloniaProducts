@@ -19,6 +19,19 @@
 			<Setter Property="Background" Value="#4478ab" />
 			<Setter Property="BorderThickness" Value="1"/>
 		</Style>
+			<Style Selector="Grid > StackPanel > StackPanel > StackPanel > Button">
+				<Setter Property="Foreground" Value="#326da8"/>
+				<Setter Property="BorderBrush" Value="#e6ebf0"/>
+				<Setter Property="Background" Value="#dfe7f0" />
+				<Setter Property="BorderThickness" Value="1"/>
+				<Setter Property="CornerRadius" Value="10"/>
+			</Style>
+			<Style Selector="Grid > StackPanel > StackPanel > StackPanel > Button:pointerover  /template/ ContentPresenter">
+				<Setter Property="Foreground" Value="#326da8"/>
+				<Setter Property="BorderBrush" Value="#ebf0f5"/>
+				<Setter Property="Background" Value="#ebf0f5" />
+				<Setter Property="BorderThickness" Value="1"/>
+			</Style>
 	</Window.Styles>
 	<Grid Margin="10">
 		<StackPanel Height="600" Width="1000" Background="#cadbed">
@@ -27,14 +40,17 @@
 			</StackPanel>
 			<StackPanel Orientation="Vertical" Margin="25">
 				<TextBlock Name="TextName" Text="Введите название продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 0 0 5"/>
-				<TextBox Name="TextBoxName" Watermark="введите название..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
+				<TextBox Name="TextBoxName" Watermark="введите название..." TextWrapping="Wrap" FontFeatures="" FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
 				<TextBlock Name="TextCost" Text="Введите цену продукта:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
 				<TextBox Name="TextBoxCost" Watermark="введите цену..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
 				<TextBlock Name="TextQuantity" Text="Введите количество продуктов:" FontFamily="Wellingthon" FontSize="22" Foreground="#326da8" Margin="0 10 0 5"/>
 				<TextBox Name="TextBoxQuantity" Watermark="введите количество..." FontFamily="Wellingthon" Background="#dfe7f0" BorderBrush="#dfe7f0" BorderThickness="1" Foreground="#326da8"/>
-			</StackPanel>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+					<Image Name="ProductImage" Height="40" Margin="5 20 5 0" />
+					<Button Name="btnAddImage" Cursor="Hand" Content="+ фото продукта" FontFamily="Wellingthon" Width="350" Height="42" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Margin="5 20 5 0" Click="AddImage_Click" />
+				</StackPanel>
+				</StackPanel>
 			<StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-				<Button Name="btnAddImage" Cursor="Hand" Content="Добавить картинку к продукту" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5 15 5 5" Click="AddImage_Click" />
 				<Button Name="btnAddProduct" Cursor="Hand" Content="Добавить продукт" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnAddProduct_Click" />
 				<Button Name="btnShowAllProducts" Cursor="Hand" Content="Показать все продукты" FontFamily="Wellingthon" Width="750" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28" Margin="5" Click="BtnShowAllProducts_Click"/>
 			</StackPanel>
