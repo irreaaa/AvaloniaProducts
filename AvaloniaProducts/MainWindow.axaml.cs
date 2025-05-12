@@ -42,7 +42,7 @@ public partial class MainWindow : Window
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = TextBoxName.Text;
-        string addedImage = Convert.ToString(ProductImage.Source);
+        string addedImage = _photo;
 
         foreach (var product in productList.Products)
         {
