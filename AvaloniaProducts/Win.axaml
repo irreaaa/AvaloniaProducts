@@ -31,7 +31,7 @@
 						<ListBox.ItemTemplate>
 							<DataTemplate DataType="local:Product">
 								<StackPanel Orientation="Horizontal" Spacing="10">
-									<Image Source="{Binding ProductImage}" Height="50" Width="100" Margin="5" />
+									<Image Source="{Binding ProductImage}" Width="100" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="True" Margin="5" />
 									<TextBlock Text="{Binding ProductName}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="10" VerticalAlignment="Center"/>
 									<TextBlock Text=" Цена:" Width="55" FontSize="19" FontFamily="Wellingthon" Foreground="#326da2" Margin="5" VerticalAlignment="Center"/>
 									<TextBlock Text="{Binding ProductCost, StringFormat={}{0} руб.}" Width="200" FontSize="19" FontFamily="Wellingthon" Foreground="#326da8" Margin="5 5 0 5" VerticalAlignment="Center"/>

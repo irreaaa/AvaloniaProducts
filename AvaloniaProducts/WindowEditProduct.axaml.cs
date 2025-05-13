@@ -1,6 +1,8 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
+using Avalonia.Media.Imaging;
+using System;
 using System.Linq;
 
 namespace AvaloniaProducts;
@@ -18,6 +20,10 @@ public partial class WinEditProduct : Window
         ProductNameTextBox.Text = _product.ProductName;
         ProductCostTextBox.Text = _product.ProductCost.ToString();
         ProductQuantityTextBox.Text = _product.ProductQuantity.ToString();
+        //if (!string.IsNullOrEmpty(_product.ProductPhoto))
+        //{
+        //    ProductImage.Source = new Bitmap(_product.ProductPhoto);
+        //}
     }
 
     public void SaveChanges_Click(object? sender, RoutedEventArgs e)

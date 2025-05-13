@@ -484,3 +484,4 @@ C:\Users\irisp\Source\Repos\AvaloniaProducts3\AvaloniaProducts\obj\Debug\net8.0\
 C:\Users\irisp\Source\Repos\AvaloniaProducts3\AvaloniaProducts\obj\Debug\net8.0\Avalonia.996F5F03.Up2Date
 C:\Users\irisp\Source\Repos\AvaloniaProducts3\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.genruntimeconfig.cache
 C:\Users\irisp\Source\Repos\AvaloniaProducts3\AvaloniaProducts\obj\Debug\net8.0\ref\AvaloniaProducts.dll
+C:\Users\irisp\Source\Repos\AvaloniaProducts\AvaloniaProducts\obj\Debug\net8.0\AvaloniaProducts.sourcelink.json

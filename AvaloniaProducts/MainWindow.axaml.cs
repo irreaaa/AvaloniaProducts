@@ -42,7 +42,6 @@ public partial class MainWindow : Window
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
     {
         string enteredProductName = TextBoxName.Text;
-        string addedImage = _photo;
 
         foreach (var product in productList.Products)
         {
@@ -69,13 +68,14 @@ public partial class MainWindow : Window
         }
         else
         {
-            productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct, addedImage);
+            productList.AddProduct(enteredProductName, enteredCostOfProduct, enteredQuantityOfProduct, _photo);
 
             TextBoxName.Text = "";
             TextBoxCost.Text = "";
             TextBoxQuantity.Text = "";
             btnAddImage.Content = "+ фото продукта";
             ProductImage.Source = null;
+            _photo = null;
         }
     }
 
