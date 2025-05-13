@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
+    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {
+    "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "projectUniqueName": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
         "projectName": "AvaloniaProducts",
-        "projectPath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
+        "projectPath": "C:\\Users\\irisp\\source\\repos\\AvaloniaProducts\\AvaloniaProducts\\AvaloniaProducts.csproj",
         "packagesPath": "C:\\Users\\irisp\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\irisp\\Source\\Repos\\AvaloniaProducts\\AvaloniaProducts\\obj\\",
         "projectStyle": "PackageReference",
