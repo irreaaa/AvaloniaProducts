@@ -48,8 +48,8 @@
 				<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 					<Image Name="ProductImage" Height="40" Margin="5 20 5 0" />
 					<Button Name="btnAddImage" Cursor="Hand" Content="+ фото продукта" FontFamily="Wellingthon" Width="350" Height="42" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Margin="5 20 5 0" Click="AddImage_Click" />
-					<Button Content="Удалить" Cursor="Hand" HorizontalAlignment="Right" Margin="5 20 5 0" Height="42" >
-						<Image Source="trashFirst.png" x:Name="DeleteBasketImage1" Height="25" />
+					<Button Click="DelImageProduct_Click" Cursor="Hand" Margin="5 20 5 0" Height="42" Background="Transparent" BorderBrush="Transparent" >
+						<Image Name="DeleteImageProduct" Height="30" />
 					</Button>				
 				</StackPanel>
 				</StackPanel>

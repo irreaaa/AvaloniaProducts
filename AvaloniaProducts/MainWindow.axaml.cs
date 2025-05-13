@@ -32,11 +32,20 @@ public partial class MainWindow : Window
             Bitmap productImageBitmap = new Bitmap(path);
             ProductImage.Source = productImageBitmap;
             btnAddImage.Content = "Выбрать другое фото";
+            DeleteImageProduct.Source = new Bitmap("../../../trashFirst.png");
         }
         catch (Exception exception)
         {
             Console.WriteLine(exception);
         }
+    }
+
+    private void DelImageProduct_Click(object? sender, RoutedEventArgs e)
+    {
+        _photo = null;
+        btnAddImage.Content = "+ фото продукта";
+        ProductImage.Source = null;
+        DeleteImageProduct.Source = null;
     }
 
     private void BtnAddProduct_Click(object? sender, RoutedEventArgs e)
