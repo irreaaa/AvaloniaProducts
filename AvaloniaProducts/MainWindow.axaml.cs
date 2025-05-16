@@ -85,6 +85,7 @@ public partial class MainWindow : Window
             btnAddImage.Content = "+ фото продукта";
             ProductImage.Source = null;
             _photo = null;
+            DeleteImageProduct.Source = null;
         }
     }
 

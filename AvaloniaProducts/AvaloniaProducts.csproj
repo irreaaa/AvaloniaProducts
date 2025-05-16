@@ -17,6 +17,8 @@
     <None Remove="edit.png" />
     <None Remove="edit1.png" />
     <None Remove="edit2.png" />
+    <None Remove="editphoto.png" />
+    <None Remove="editphoto1.png" />
     <None Remove="Images\1.jpg" />
     <None Remove="Images\2.jpg" />
     <None Remove="Images\3.jpg" />
@@ -47,6 +49,8 @@
     <AvaloniaResource Include="edit.png" />
     <AvaloniaResource Include="edit1.png" />
     <AvaloniaResource Include="edit2.png" />
+    <AvaloniaResource Include="editphoto.png" />
+    <AvaloniaResource Include="editphoto1.png" />
     <AvaloniaResource Include="Images\1.jpg" />
     <AvaloniaResource Include="Images\2.jpg" />
     <AvaloniaResource Include="Images\3.jpg" />
