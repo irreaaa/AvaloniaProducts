@@ -38,7 +38,7 @@ public partial class WinEditProduct : Window
         {
             string fileName = dialog[0];
             Random random = new Random();
-            string newFileName = "photo" + random.Next(1, 1000) + ".jpg";
+            string newFileName = "photo" + random.Next(1, 10000) + ".jpg";
             string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../Images/", newFileName);
             File.Copy(fileName, imagePath, true);
             _newPhoto = newFileName;
@@ -76,11 +76,24 @@ public partial class WinEditProduct : Window
             ShowError("Введите корректное количество.");
             return;
         }
+        
+        string oldName = _product.ProductName;
 
         _product.ProductName = ProductNameTextBox.Text;
         _product.ProductCost = newCost;
         _product.ProductQuantity = newQuantity;
-        _product.ProductPhoto = _newPhoto ?? _product.ProductPhoto; 
+        _product.ProductPhoto = _newPhoto ?? _product.ProductPhoto;
+
+        var productsInBasket = BasketList.Instance.Basket;
+        foreach (var productInBasket in productsInBasket)
+        {
+            if (productInBasket.ProductName == oldName)
+            {
+                productInBasket.ProductName = _product.ProductName;
+                productInBasket.ProductCost = _product.ProductCost * productInBasket.ProductQuantity;
+                productInBasket.ProductPhoto = _newPhoto ?? _product.ProductPhoto;
+            }
+        }
 
         ReturnToList();
     }
